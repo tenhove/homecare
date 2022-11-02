@@ -1,0 +1,31 @@
+---
+title: "Charts"
+format: 
+  html:
+    page-layout: full
+editor: visual
+---
+
+::: panel-tabset
+
+## 1. Insights in demand for care services
+
+- [1A - Total duration per team by care type](1a.html)
+- [1B - Distribution of weekly demand for care services](1b.html)
+- [1C - Total demand for care per day by part of days](1c.html)
+
+## 2. Demand vs supply
+
+## 3. Continuity of service
+
+## 4. Scale / size teams
+
+:::
+
+
+
+
+
+
+
+
