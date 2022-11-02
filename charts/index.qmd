@@ -16,7 +16,11 @@ editor: visual
 
 ## 2. Demand vs supply
 
+- [2A - Distribution of weekly supply of care services](2a.html)
+
 ## 3. Continuity of service
+
+- [3A - Count of clients per number of weekly day parts](3a.html)
 
 ## 4. Scale / size teams
 
