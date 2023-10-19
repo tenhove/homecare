@@ -128,7 +128,11 @@ plot_care_demand(gamma=1,idx=[5,32,29],z=[6.99,9.01,18.49],d=[132.30,370.87,231.
 
 Let M be the total number of scheduled care workers during some period [$T$]{style="color: red;"}, and let [$p$]{style="color: red;"} be the probability that the care worker is present.
 
-The number of care workers present [$\tilde{M}$]{style="color: red;"} then follows a Binomial( $M$, $p$ ) distribution. Consequently, the properties of the effective capacity [$P$]{style="color: red;"} $= \frac{\tilde{M}}{M}$ follow directly from this observation.
+The number of care workers present [$\tilde{M}$]{style="color: red;"} then follows a Binomial($M$, $p$) distribution. Consequently, the properties of the effective capacity
+
+[$P$]{style="color: red;"} $= \frac{\tilde{M}}{M}$
+
+follow directly from this observation.
 
 ## Principle 3: Effective capacity
 
@@ -138,6 +142,8 @@ $$\mathbb{P}(P \le k) = \mathbb{P}(\tilde M \le k M)
  = \frac{B(kM+1,(1-k)M,p)}{B(kM+1,(1-k)M)}$$ with $B(x,y,p) = \int_p^1 t^{x-1} (1-t)^{y-1} {\rm d}t$ the incomplete Beta function and $B(x,y) = B(x,y,0)$.
 
 ## Principle 3: Effective capacity
+
+*Small teams are more prone to lower levels of effective capacity than large teams as a result of variability in leave of absence and sick leave, whereas the differences between larger teams become smaller.*
 
 ```{python}
 #------------------------------------------------------------------------------
@@ -162,7 +168,7 @@ def productivity_cdf(x,M,p):
 # max_M: upper limit of x-axis (maximum scheduled workers)
 # min_M: lower limit of x-axis (minimum scheduled workers) 
 def plot_productivity(targets,p,min_M,max_M,pinned_size):
-    fig, ax = plt.subplots(figsize=(9.6,7.2))
+    fig, ax = plt.subplots(figsize=(12,5))
     M = np.arange(min_M, max_M)
     
     if type(targets) == float or type(targets) == int : targets = [targets]
@@ -199,10 +205,6 @@ def plot_productivity(targets,p,min_M,max_M,pinned_size):
 
 plot_productivity([0.5,0.6,0.7], p=0.79, min_M=1, max_M=40, pinned_size = 7)
 ```
-
-## Principle 3: Effective capacity
-
-*Small teams are more prone to lower levels of effective capacity than large teams as a result of variability in leave of absence and sick leave, whereas the differences between larger teams become smaller.*
 
 # Principle 4: Team composition
 
@@ -326,9 +328,9 @@ def plot_complete_graph(M):
     
     # Draw the graph
     pos = nx.spring_layout(G)  # positions for all nodes
-    nx.draw_networkx_nodes(G, pos, node_size=700)
+    nx.draw_networkx_nodes(G, pos, node_size=700, node_color="tomato")
     nx.draw_networkx_edges(G, pos, width=1.0, alpha=0.5)
-    nx.draw_networkx_labels(G, pos, font_size=20)
+    nx.draw_networkx_labels(G, pos, font_size=20, font_color="white")
     
     plt.title("Complete Graph with {} nodes".format(M))
     plt.show()
@@ -377,9 +379,9 @@ def plot_graph(N, k, M):
     
     # Draw the graph
     pos = nx.spring_layout(G)
-    nx.draw_networkx_nodes(G, pos)
+    nx.draw_networkx_nodes(G, pos, node_color="tomato")
     nx.draw_networkx_edges(G, pos)
-    nx.draw_networkx_labels(G, pos)
+    nx.draw_networkx_labels(G, pos, font_color="white")
     
     # Set the title
     plt.title(f"Graph with {total_nodes} nodes and {total_edges} edges")
