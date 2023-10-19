@@ -7,3 +7,7 @@ notebooks/
 lits/
 data/
 charts/
+survival/
+.virtualenv
+app/
+yoram/
