@@ -168,7 +168,7 @@ def productivity_cdf(x,M,p):
 # max_M: upper limit of x-axis (maximum scheduled workers)
 # min_M: lower limit of x-axis (minimum scheduled workers) 
 def plot_productivity(targets,p,min_M,max_M,pinned_size):
-    fig, ax = plt.subplots(figsize=(12,5))
+    fig, ax = plt.subplots(figsize=(10,6))
     M = np.arange(min_M, max_M)
     
     if type(targets) == float or type(targets) == int : targets = [targets]
