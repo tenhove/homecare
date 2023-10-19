@@ -328,7 +328,7 @@ def plot_complete_graph(M):
     
     # Draw the graph
     pos = nx.spring_layout(G)  # positions for all nodes
-    nx.draw_networkx_nodes(G, pos, node_size=700, node_color="skyblue")
+    nx.draw_networkx_nodes(G, pos, node_size=700, node_color="tomato")
     nx.draw_networkx_edges(G, pos, width=1.0, alpha=0.5)
     nx.draw_networkx_labels(G, pos, font_size=20, font_color="white")
     
