@@ -31,7 +31,29 @@ jupyter: python3
 
 # Data understanding
 
+![](images/database.png)
+
+## Data understanding
+
+| Area type | Teams | Planned care \n(hrs/wk) |    Clients | Clients/km^2^ |
+|-----------|------:|------------------------:|-----------:|--------------:|
+| Urban     |    26 |                238 (51) | 221 (51.4) |     71 (31.4) |
+| Suburban  |    18 |                224 (54) | 238 (61.3) |      11 (5.4) |
+| Rural     |    11 |                213 (46) | 176 (53.6) |       3 (1.1) |
+
+: General information per area type for the years 2020, 2021; all numerical values (except team count) represent the mean, with standard deviation in brackets.
+
 # Data preparation
+
+![](images/durationperday.png)
+
+## Data preparation
+
+![](images/meansvar.png)
+
+## Data preparation
+
+![](images/los.png)
 
 # Modeling
 
@@ -406,9 +428,7 @@ plot_graph(1, 3, 12);  # 3 complete graphs with 2 nodes each connected to a cent
 
 ## Principle 6
 
-
-*The complexity of the number of interactions for a team of size [$M$]{style="color: red;"} is $O(M^2)$. By splitting the team into [$k$]{style="color: red;"} sub-teams, managed by one mediator, the number of interactions can be reduced by a factor [$k$]{style="color: red;"} as [$M$]{style="color: red;"} grows large.*
-
+*The complexity of the number of interactions for a team of size* [$M$]{style="color: red;"} is $O(M^2)$. By splitting the team into [$k$]{style="color: red;"} sub-teams, managed by one mediator, the number of interactions can be reduced by a factor [$k$]{style="color: red;"} as [$M$]{style="color: red;"} grows large.
 
 ```{python}
 #------------------------------------------------------------------------------
@@ -474,14 +494,19 @@ def plot_interactions(team_splits,max_team_size, pinned_size):
 plot_interactions(team_splits=4, max_team_size=20, pinned_size=7);
 ```
 
+# Practice based scenarios
 
-# Discussion
+::: columns
+::: {.column width="35%"}
+![](images/map.png){width="300"}
+:::
 
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+::: {.column width="65%"}
+![](images/scenarios.png){width="900"}
+:::
+:::
 
-# Conclusion
-
-When you click the **Render** button a presentation will be generated that includes both content and the output of embedded code. You can embed code like this:
+# Questions
 
 # References {.unnumbered}
 
