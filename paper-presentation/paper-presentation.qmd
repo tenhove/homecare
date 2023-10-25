@@ -135,7 +135,7 @@ Hence, the utilization of the capacity [$C$]{style="color: red;"} is $$\frac{\ma
 
 ::: columns
 ::: {.column width="40%"}
-*The buffer capacity required to handle demand variability decreases with scale, but the possible reduction becomes smaller as the scale increases.*
+*The buffer capacity required to handle demand variability decreases with scale, but marginal reductions decrease as scale increases.*
 
 [NB: The available data is limited to planned care and may not accurately reflect the actual demand for home care.]{style="color: red;"}
 :::
@@ -488,7 +488,7 @@ plot_graph(1, 3, 12);  # 3 complete graphs with 2 nodes each connected to a cent
 
 ## Principle 6: Communication and management
 
-*The complexity of the number of interactions for a team of size* [$M$]{style="color: red;"} is $O(M^2)$. By splitting the team into [$k$]{style="color: red;"} sub-teams, managed by one mediator, the number of interactions can be reduced by a factor [$k$]{style="color: red;"} as [$M$]{style="color: red;"} grows large.
+*The complexity of the number of interactions for a team of size [$M$]{style="color: red;"} is $O(M^2)$. By splitting the team into [$k$]{style="color: red;"} sub-teams, managed by one mediator, the number of interactions can be reduced by a factor [$k$]{style="color: red;"} as [$M$]{style="color: red;"} grows large.*
 
 ```{python}
 #------------------------------------------------------------------------------
