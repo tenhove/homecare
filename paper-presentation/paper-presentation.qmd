@@ -564,6 +564,19 @@ plot_interactions(team_splits=4, max_team_size=20, pinned_size=7);
 :::
 :::
 
+# 'Optimal' team-composition
+::: columns
+::: {.column width="50%"}
+$$\lambda_1\frac{\mathbb{E}[N]}{C}+\lambda_3\mathbb{P}(P \le l)−\lambda_4 ∑_{k∈Q}(\frac{C_k}{∑_{j∈Q}C_j}- \frac{\mu_k}{∑_{j∈Q}\mu_j}) −\lambda_6\frac{M(M−1)}{2}$$
+:::
+
+::: {.column width="65%"}
+![](images/optimal.png){width="900"}
+:::
+:::
+
+ 
+
 # Questions
 
 # References {.unnumbered}
