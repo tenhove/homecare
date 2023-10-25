@@ -295,21 +295,33 @@ plot_productivity([0.5,0.6,0.7], p=0.79, min_M=1, max_M=40, pinned_size = 7)
 
 ## Principle 4: Team composition
 ::: r-fit-text
+::: columns
+::: {.column width="40%"}
 $$
 min \sum\limits_{k∈Q} w_kC_k\\
 s.t. C_k + e_k ≥ μ_k + η_ασ_k, ∀k ∈ Q,\\
 C_k ∈ {0}∪[l,∞), ∀k ∈ Q,\\
 $$
+:::
+::: {.column width="60%"}
+
 Where:
 
-- $Q = \{1,2,...,K\}, K ∈ N$, is a set of qualification levels with an ordering such that capacity of QL $k$ can be deployed to cover demand of all QLs $j≤k$ as well.
+-   $Q = \{1,2,...,K\}, K ∈ N$, is a set of qualification levels with an ordering and QL $k$ can be deployed to cover demand of all QLs $j≤k$ as well.
 
-- $N_k$ is the required demand for QL $k∈Q$ in a given week and $N_k$ is normally distributed with mean $μ_k$ and variance $σ_k^2$.
-- $C_k ≥ 0$ is the capacity of QL $k$ deployed over the given week.
+-   $N_k$ is the required demand for QL $k∈Q$ in a given week and $N_k$ is normally distributed with mean $μ_k$ and variance $σ_k^2$.
 
-- Each unit of capacity of QL $k$ comes at a cost $w_k ≥ 0$, with $w_j ≤ w_k$, if $j ≤ k$.
+-   $C_k ≥ 0$ is the capacity of QL $k$ deployed over the given week.
 
-- Due to the minimum size of contracts, if capacity of QL $k$ is used (i.e., $C_k > 0$), then the corresponding capacity should at least be $l$ units.
+-   Each unit of capacity of QL $k$ comes at a cost $w_k ≥ 0$, with $w_j ≤ w_k$, if $j ≤ k$.
+
+-   If capacity of QL $k$ is used (i.e., $C_k > 0$), the corresponding capacity should at least be $l$ units (= minimum contract size).
+
+-   $e_K=0$ and $e_k :=\mathbb{E}(∑_{j>k}C_j−N_j−e_j)^+$, for $k<K$, is the excess capacity of QLs $k,...,K$.
+
+- $η_α ≥0$ is such that $Φ(η_α)=1−α$, with $α∈(0,1/2)$ to bound the probability of insufficient capacity.
+:::
+:::
 :::
 
 ## Principle 4: Team composition
